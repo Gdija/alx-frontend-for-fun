@@ -1,0 +1,58 @@
+.toggle{
+    margin: 50px;
+}
+.toggle-inner{
+    position: relative;
+    height: 70px;
+    width: 210px;
+    cursor: pointer;
+    border-radius: 200px;
+    background-color: hsl(0, 0%, 95%);
+    transition: .2s;
+    border: 3px solid #C7C8CC;
+}
+.toggle-switch::before{
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #C7C8CC;
+    background-color:#fff;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    background-color: red;
+}
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+    content: 'Yes';
+    color: #fff;
+    margin: 10px;
+    margin-left: 50px;
+    display: block;
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+   
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner::before{
+    content: 'No';
+    color: #C7C8CC;
+    margin: 10px;
+    margin-left: 110px;
+    display: block;
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+   
+}
+.toggle-cb:checked + .toggle-label .toggle-switch::before{
+    transform: translateX(150px);
+}
+input{
+    display: none;
+}
