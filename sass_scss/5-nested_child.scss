@@ -1,0 +1,7 @@
+/* nested child */
+body{
+	color: #D3D3D3;
+	> .red{
+		color: #FF0000;
+	}
+}
