@@ -1,0 +1,11 @@
+/* loop_col */
+
+$col: 4;
+
+@for $column from 1 through $col{
+	.col-#{$column} {
+		width: (100% / $column);
+	}
+}
+
+
